@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pharmacy - Hospital Management</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="navbar__logo">
+                <a href="index.html"><img src="static/images/logo.png" alt="Hospital Logo"></a>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About Us</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="doctors.html" class="navbar__link">Doctors</a></li>
+                <li><a href="consultation.html" class="navbar__link">Consultation</a></li>
+                <li><a href="pharmacy.html" class="navbar__link">Pharmacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pharmacy Order Form -->
+    <section class="pharmacy container">
+        <h1 class="pharmacy__title">Order Medicine</h1>
+        <form id="order-form" class="form">
+            <div class="form__group">
+                <label for="medicine" class="form__label">Select Medicine:</label>
+                <select id="medicine" name="medicine" class="form__input" required>
+                    <optgroup label="Analgesics">
+                        <option value="aspirin" data-price="5.00">Aspirin - $5.00</option>
+                        <option value="ibuprofen" data-price="7.00">Ibuprofen - $7.00</option>
+                        <option value="paracetamol" data-price="6.00">Paracetamol - $6.00</option>
+                        <!-- Add more options as needed -->
+                    </optgroup>
+                    <optgroup label="Antibiotics">
+                        <option value="amoxicillin" data-price="10.00">Amoxicillin - $10.00</option>
+                        <option value="ciprofloxacin" data-price="12.00">Ciprofloxacin - $12.00</option>
+                        <option value="doxycycline" data-price="11.00">Doxycycline - $11.00</option>
+                        <!-- Add more options as needed -->
+                    </optgroup>
+                    <optgroup label="Antidepressants">
+                        <option value="fluoxetine" data-price="15.00">Fluoxetine - $15.00</option>
+                        <option value="sertraline" data-price="18.00">Sertraline - $18.00</option>
+                        <option value="venlafaxine" data-price="20.00">Venlafaxine - $20.00</option>
+                        <!-- Add more options as needed -->
+                    </optgroup>
+                    <optgroup label="Antihistamines">
+                        <option value="cetirizine" data-price="8.00">Cetirizine - $8.00</option>
+                        <option value="loratadine" data-price="9.00">Loratadine - $9.00</option>
+                        <!-- Add more options as needed -->
+                    </optgroup>
+                    <optgroup label="Antihypertensives">
+                        <option value="lisinopril" data-price="7.50">Lisinopril - $7.50</option>
+                        <option value="losartan" data-price="8.50">Losartan - $8.50</option>
+                        <option value="amlodipine" data-price="9.00">Amlodipine - $9.00</option>
+                        <!-- Add more options as needed -->
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="form__group">
+                <label for="quantity" class="form__label">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" class="form__input" min="1" required>
+            </div>
+            
+            <div class="form__actions">
+                <button type="button" id="save-favorites" class="form__button">Add to Favorites</button>
+                <button type="button" id="apply-favorites" class="form__button">Apply Favorites</button>
+                <button type="submit" class="form__button">Order Medicine</button>
+            </div>
+        </form>
+
+        <h2 class="order__title">Your Order</h2>
+        <table id="order-table" class="order__table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Price</td>
+                    <td id="total-price">$0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 Hospital Management. All rights reserved.</p>
+            <ul class="footer__social">
+                <li><a href="#"><img src="static/images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="static/images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="static/images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="static/js/pharmacy.js"></script>
+</body>
+</html>

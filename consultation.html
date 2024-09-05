@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consultation Reservation - Hospital Management</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="navbar__logo">
+                <a href="index.html"><img src="static/images/logo.png" alt="Hospital Logo"></a>
+            </div>
+            <ul class="navbar__links">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About Us</a></li>
+                <li><a href="services.html" class="navbar__link">Services</a></li>
+                <li><a href="doctors.html" class="navbar__link">Doctors</a></li>
+                <li><a href="consultation.html" class="navbar__link">Consultation</a></li>
+                <li><a href="pharmacy.html" class="navbar__link">Pharmacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Consultation Reservation Form -->
+    <section class="consultation container">
+        <h1 class="consultation__title">Consultation Reservation</h1>
+        <form action="#" method="post" class="form">
+            <label for="name" class="form__label">Full Name:</label>
+            <input type="text" id="name" name="name" class="form__input" required>
+            
+            <label for="email" class="form__label">Email:</label>
+            <input type="email" id="email" name="email" class="form__input" required>
+            
+            <label for="phone" class="form__label">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" class="form__input" required>
+            
+            <label for="doctor" class="form__label">Select Doctor:</label>
+            <select id="doctor" name="doctor" class="form__input" required>
+                <option value="dr-jane-smith">Dr. Jane Smith</option>
+                <option value="dr-john-doe">Dr. John Doe</option>
+                <option value="dr-emily-white">Dr. Emily White</option>
+                <!-- Add more options as needed -->
+            </select>
+            
+            <label for="date" class="form__label">Preferred Date:</label>
+            <input type="date" id="date" name="date" class="form__input" required>
+            
+            <label for="time" class="form__label">Preferred Time:</label>
+            <input type="time" id="time" name="time" class="form__input" required>
+            
+            <button type="submit" class="form__submit">Book Consultation</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2024 Hospital Management. All rights reserved.</p>
+            <ul class="footer__social">
+                <li><a href="#"><img src="static/images/facebook-icon.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="static/images/twitter-icon.png" alt="Twitter"></a></li>
+                <li><a href="#"><img src="static/images/instagram-icon.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>
